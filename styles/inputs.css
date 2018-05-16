@@ -1,1 +1,8 @@
-
+/*inputstyles*/input {
+    width: 110px; height: 25px;
+    border: 1px black solid;
+    border-radius: 15px;
+}::placeholder{
+    text-align: center;
+    font-size: 1em;
+}
