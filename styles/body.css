@@ -1,1 +1,27 @@
+main {
+    position: absolute;
+    width: 100%; height: 900px;
+    margin-top: 55%;
+    background: red; /*Esto se elimina*/
+} main div.contenedor1{
+    position: absolute;
+    width: 90%;
+    height: 45%;
+    background: rebeccapurple; /*Esto se elimina*/
+    margin-top: 5%;
+    left: 5%;
+} main div.contenedor2{
+    position: absolute;
+    width: 90%;
+    height: 45%;
+    background: blue; /*Esto se elimina*/
+    top: 50%;
+    left: 5%;
+}
 
+/*edicion del texto p o h1*/
+
+p{
+    font-size: 4vw;
+    line-height: 100%;
+}
