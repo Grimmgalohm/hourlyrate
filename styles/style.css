@@ -1,0 +1,58 @@
+/*El texto básicamente funciona con la imagen por que tiene un zindex más alto. en cuanto a poder centrarlo
+y que quedara responsive sin necesidad de modificar el margin para cada tamaño de pantalla se puso un width 
+del 100% asi quedaría con el mismo tamaño del baner*/
+@import url("body.css");
+@import url("inputs.css");
+*{margin: 0%; font-family: 'Roboto', sans-serif;}
+header{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    overflow: hidden;
+}header img{
+    position: relative;
+    width: 100%;
+}
+/*Mobile first - si es necesario se modifica solo esta parte*/
+header h1 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    font-size: 9vw;
+    color: white;
+    z-index: 1;
+    top: 55%;
+}
+ 
+@media only screen and (min-width:768px){
+    header h1{
+        top: 45%;
+    }
+}
+
+@media only screen and (min-width:960px){
+    header h1{
+        top: 35%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    header h1{
+        top: 25%;
+        font-size: 8vw;
+    }
+}
+
+@media only screen and (min-width:1440px){
+    header h1{
+        top: 10%;
+        font-size: 7vw;
+    }
+} 
+
+@media only screen and (min-width:2560px){
+    header h1{
+        top: 10%;
+        font-size: 5vw;
+    }
+}
