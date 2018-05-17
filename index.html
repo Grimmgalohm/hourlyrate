@@ -18,7 +18,7 @@
   <!--Main, Text box and inputbox-->
 <main>
   <div class="contenedor1">
-    <h3></h3>
+    <h3>¿Cuánto debo cobrar?</h3>
     <p></p>
   </div>
 
@@ -26,16 +26,22 @@
       <form>
       <input type="text" name="name" placeholder="Nombre" />
       <input type="text" name="horaslaborales" placeholder="Horas diarias" />
-      <input type="text" name="diaslaborales" placeholder="" />
-      <input type="text" name="salariomensual" placeholder="" />
-      <input type="text" name="diaslibres" placeholder="" />
-      <input type="text" name="diasincapacidad" placeholder="" />
-      <input type="text" name="tiempojuntas" placeholder="" />
-      <input type="text" name="gastosmensuales" placeholder="" />
-      <input type="text" name="jubilacion" placeholder="" />
+      <input type="text" name="diaslaborales" placeholder="Días laborales" />
+      <input type="text" name="salariomensual" placeholder=" Salario mensual" />
+      <input type="text" name="diaslibres" placeholder="Días libres" />
+      <input type="text" name="diasincapacidad" placeholder="Incapacidades" />
+      <input type="text" name="tiempojuntas" placeholder="Juntas" />
+      <input type="text" name="gastosmensuales" placeholder="Gastos mensuales" />
+      <input type="text" name="jubilacion" placeholder="Jubilación" />
       <button type="submit">Calcular</button>
     </form>
-    <p class="namae"></p>
+
+    <p><b class="tunombre"></b>, tu resutado es : $<b class="resultado"></b> por hora</p>
+    <p>Tu porcentaje de rentabilidad es: %<b class="rentabilidad"></b></p>
+    <p>(recuerda que para que sea rentable, tus numeros tienen que ser menores a 1.5, de no saer así
+      revisa datos como: dias libres, de incapacidad u horas/días laborales... 
+      o simplemente puede que gastes más de lo que quieres ganar)</p>
+
     <script src="scripts/app.js"></script>
   </div>
 
