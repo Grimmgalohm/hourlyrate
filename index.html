@@ -19,28 +19,49 @@
 <main>
   <div class="contenedor1">
     <h3>¿Cuánto debo cobrar?</h3>
-    <p></p>
+    <p>Trabajar por cuenta propia es una experiencia que te hace valorar realmente tu tiempo y tu trabajo,
+      sin embargo, a veces, cuando empezamos, no sabemos exactamente cuanto cobrar por hora, y suele pasar, que, 
+      o elevamos nuestro precio hasta las nubes o, al contrario, cobramos poco (muchas veces por ser "buena onda") 
+      sin tener en cuenta nuestros propios gastos y el tiempo que implica el trabajo, en el que a veces invertimos 
+      tiempo de más.<br>Pero no te preocupes, para poder cobrar lo justo, que no te afecte a tus necesidades infravalore tu trabajo, 
+      y tampoco se vaya tan arriba en precio te presentamos la calculadora de precio por hora.</p>
+      <p>Para utilizarla ten en cuenta datos como cuánto gastas de forma mensual en aspectos básicos de tu vida (
+        cosas como factuas de luz, renta, agua, gasolina o pasajes, comida, etc, etc) así, como el porcetaje anual de tu 
+        salario que destinarás a tu jubilación, 
+      </p>
   </div>
 
   <div class="contenedor2">
       <form>
-      <input type="text" name="name" placeholder="Nombre" />
-      <input type="text" name="horaslaborales" placeholder="Horas diarias" />
-      <input type="text" name="diaslaborales" placeholder="Días laborales" />
-      <input type="text" name="salariomensual" placeholder=" Salario mensual" />
-      <input type="text" name="diaslibres" placeholder="Días libres" />
-      <input type="text" name="diasincapacidad" placeholder="Incapacidades" />
-      <input type="text" name="tiempojuntas" placeholder="Juntas" />
-      <input type="text" name="gastosmensuales" placeholder="Gastos mensuales" />
-      <input type="text" name="jubilacion" placeholder="Jubilación" />
-      <button type="submit">Calcular</button>
+      <input class="n" type="text" name="name" placeholder="Nombre" />
+      <input class="hl" type="text" name="horaslaborales" placeholder="Horas diarias" />
+      <input class="dl" type="text" name="diaslaborales" placeholder="Días laborales" />
+      <input class="smd" type="text" name="salariomensual" placeholder=" Salario mensual" />
+      <input class="dlib" type="text" name="diaslibres" placeholder="Días libres" />
+      <input class="inc" type="text" name="diasincapacidad" placeholder="Incapacidades" />
+      <input class="tj" type="text" name="tiempojuntas" placeholder="Juntas" />
+      <input class="gmf" type="text" name="gastosmensuales" placeholder="Gastos mensuales" />
+      <input class="jub" type="text" name="jubilacion" placeholder="Jubilación" />
+      <button class="boton" type="submit">Calcular</button>
     </form>
 
+    <p class="n">Escribe tu nombre:</p>
+    <p class="hl">Horas a laborar</p>
+    <p class="dl">Días a laborar</p>
+    <p class="smd">Salario mensual deseado</p>
+    <p class="dlib">Días libres al año</p>
+    <p class="inc">Días para emergencias</p>
+    <p class="tj">Tiempo en juntas (%)</p>
+    <p class="gmf">Gastos mensuales fijos</p>
+    <p class="jub">Aporte para la jubilación(%)</p>
+
+    <div class="minidiv">
     <p><b class="tunombre"></b>, tu resutado es : $<b class="resultado"></b> por hora</p>
     <p>Tu porcentaje de rentabilidad es: %<b class="rentabilidad"></b></p>
     <p>(recuerda que para que sea rentable, tus numeros tienen que ser menores a 1.5, de no saer así
       revisa datos como: dias libres, de incapacidad u horas/días laborales... 
       o simplemente puede que gastes más de lo que quieres ganar)</p>
+    </div>
 
     <script src="scripts/app.js"></script>
   </div>
