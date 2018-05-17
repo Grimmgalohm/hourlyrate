@@ -18,18 +18,18 @@ function handleSubmit(e){
   var diasdeinc = e.target.diasincapacidad.value;
   var tiempojunt = e.target.tiempojuntas.value;
   var gastosmens = e.target.gastosmensuales.value;
-  var jubilación = e.target.jubilacion.value;
+  var jubi = e.target.jubilacion.value;
 
   var salariobrutoanual = salariomens * 12;
   var horasposibles = (horaslab * diaslab)*52;
-  var horabasico = salariobrutoanual/horasposibles;
-  var horasnolaborales = (diaslab * horaslab) + (diaslib * horaslab);
-  var tiempoadmin = (tiempojunt/100)*(horasposibles - horasnolaborales);
-  var gastosfijos = gastosmens *12;
-  var precioextra = (horasnolaborales * tiempoadmin)*gastosfijos;
-  var horasefectivas = (horasposibles - horasnolaborales - tiempoadmin) * horabasico;
+  var horabasica = salariobrutoanual/horasposibles;
+  var horasnolaborables = (diaslib * horaslab) + (diaslib * horaslab);
+  var tiempoadministrativo = (tiempojunt/100) * (horasposibles - horasnolaborables);
+  var gastosfijos = gastosmens * 12;
+  var precioextra = horasnolaborables + tiempoadministrativo + gastosfijos;
+  var horasefectivas = (horasposibles-horasnolaborables-tiempoadministrativo)*horabasica;
   var rentabilidad = precioextra/horasefectivas;
-  var precioxhora = (horabasico + (horabasico *rentabilidad)) + (horabasico*(jubilacion/100));
+  var precioxhora = (horabasica + (horabasica*rentabilidad))+(horabasica*(jubi/100));
 
   document.querySelector(".resultado").innerHTML=precioxhora;
   document.querySelector(".tunombre").innerHTML=nombre;
