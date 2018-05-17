@@ -9,7 +9,31 @@
  */
 function handleSubmit(e){
   e.preventDefault();
-  console.log(e.target.name.value);
+
+  var nombre = e.target.name.value;
+  var horaslab = e.target.horaslaborales.value;
+  var diaslab = e.target.diaslaborales.value;
+  var salariomens = e.target.salariomensual.value;
+  var diaslib = e.target.diaslibres.value;
+  var diasdeinc = e.target.diasincapacidad.value;
+  var tiempojunt = e.target.tiempojuntas.value;
+  var gastosmens = e.target.gastosmensuales.value;
+  var jubilación = e.target.jubilacion.value;
+
+  var salariobrutoanual = salariomens * 12;
+  var horasposibles = (horaslab * diaslab)*52;
+  var horabasico = salariobrutoanual/horasposibles;
+  var horasnolaborales = (diaslab * horaslab) + (diaslib * horaslab);
+  var tiempoadmin = (tiempojunt/100)*(horasposibles - horasnolaborales);
+  var gastosfijos = gastosmens *12;
+  var precioextra = (horasnolaborales * tiempoadmin)*gastosfijos;
+  var horasefectivas = (horasposibles - horasnolaborales - tiempoadmin) * horabasico;
+  var rentabilidad = precioextra/horasefectivas;
+  var precioxhora = (horabasico + (horabasico *rentabilidad)) + (horabasico*(jubilacion/100));
+
+  document.querySelector(".resultado").innerHTML=precioxhora;
+  document.querySelector(".tunombre").innerHTML=nombre;
+  document.querySelector(".rentabilidad").innerHTML=rentabilidad;
 }
 
 
